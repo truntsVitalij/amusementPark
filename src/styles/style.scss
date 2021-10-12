@@ -1,0 +1,19 @@
+@import "~bulma";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  
+  cursor: pointer;
+}
+p, div, button {
+  color: white;
+  font-family: 'Comfortaa', sans-serif;
+}
