@@ -46,6 +46,16 @@ export default {
           ease: "back",
         }
       );
+      gsap.to(firstTitle, {
+        textShadow: "5px 5px 5px rgba(176, 235, 176, 0.5)",
+        delay: 1.5,
+        duration: 0.5,
+      });
+      gsap.to(lastTitle, {
+        textShadow: "5px 5px 5px rgba(176, 235, 176, 0.5)",
+        delay: 1.5,
+        duration: 0.5,
+      });
       gsap.fromTo(
         lastTitle,
         {
@@ -111,7 +121,6 @@ export default {
     width: 100%;
     height: 100px;
     background-image: linear-gradient(to top, #000000, transparent);
-    z-index: 10;
   }
 
   .park-title {
@@ -127,7 +136,6 @@ export default {
     text-transform: uppercase;
     color: rgb(99, 170, 99);
     font-weight: 700;
-    z-index: 1;
   }
   .image {
     position: absolute;
@@ -141,7 +149,6 @@ export default {
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
     animation: animate 1s infinite alternate;
     svg {
       fill: rgb(99, 170, 99);

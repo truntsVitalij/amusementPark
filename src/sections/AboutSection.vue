@@ -17,7 +17,7 @@
               </svg>
               <span> Evarland </span>
             </div>
-            <div class="column details-column">
+            <div class="column details-colum">
               <div class="column is-narrow text-column">
                 <p ref="textContent">
                   In South Korea, there is a popular resort park Everland, it is
@@ -26,9 +26,7 @@
                   thematic zones, among which there are suitable for fans of
                   extreme sports in the West, and for those who want to visit
                   original shops. The park has a real shopping area with the
-                  tempting name "World's Fair". Everland is one of the most
-                  visited amusement parks in the world, with at least 6.5
-                  million visitors annually since 2011.
+                  tempting name "World's Fair".
                 </p>
               </div>
             </div>
@@ -49,13 +47,11 @@ export default {
     const { textContent, container } = this.$refs;
     gsap.to(textContent, {
       duration: 1.5,
+      delay: 1,
       opacity: 1,
-      translateY: 0,
       scrollTrigger: {
         trigger: container,
-        markers: true,
-        start: "200px bottom",
-        end: "50% 40%",
+        start: "30% bottom",
         toggleActions: "restart play restart play",
       },
     });
@@ -78,6 +74,7 @@ export default {
     .column {
       padding-bottom: 0;
       .text-column {
+        text-align: justify;
         padding: 2em;
         font-weight: 500;
         letter-spacing: 0.2em;
@@ -85,7 +82,6 @@ export default {
       p {
         margin-bottom: 2em;
         opacity: 0;
-        transform: translateY(50px);
       }
       &.bordered-column {
         display: flex;
@@ -107,9 +103,6 @@ export default {
           font-size: 32px;
           font-weight: 600;
         }
-      }
-      &.details-column {
-        text-align: center;
       }
       &.video-column {
         padding: 0;
