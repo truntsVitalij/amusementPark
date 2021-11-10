@@ -1,7 +1,7 @@
 <template>
   <div class="section price-section">
-    <p class="title" ref="tariffTitle">Choose you tariff</p>
     <div class="container price-container">
+      <h2 class="section__title" ref="tariffTitle">Choose you tariff</h2>
       <div class="columns">
         <div class="column">
           <tariff-block>

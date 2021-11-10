@@ -1,18 +1,18 @@
 <template>
   <section class="hero is-fullheight">
-    <img ref="bg" class="image bg" src="@/assets/park.png" />
-    <img ref="people" class="image people" src="@/assets/people.png" />
+    <img ref="bg" class="image bg" src="@/assets/images/park.png" />
+    <img ref="people" class="image people" src="@/assets/images/people.png" />
     <div ref="title" class="park-title">
       <span ref="firstTitle">resort park</span
       ><span ref="lastTitle">Everland</span>
     </div>
-    <div class="sroll-block">
+    <button class="sroll-block">
       <svg ref="scrollButton" viewBox="0 0 60 60">
         <path
           d="M30 3.75C15.5039 3.75 3.75 15.5039 3.75 30C3.75 44.4961 15.5039 56.25 30 56.25C44.4961 56.25 56.25 44.4961 56.25 30C56.25 15.5039 44.4961 3.75 30 3.75ZM40.8105 24.4746L30.3809 38.8887C30.3377 38.9486 30.2809 38.9973 30.2152 39.031C30.1495 39.0646 30.0767 39.0822 30.0029 39.0822C29.9291 39.0822 29.8563 39.0646 29.7906 39.031C29.7249 38.9973 29.6682 38.9486 29.625 38.8887L19.1953 24.4746C18.9727 24.1641 19.1953 23.7305 19.5762 23.7305H22.3242C22.9219 23.7305 23.4902 24.0176 23.8418 24.5039L30 33.0234L36.1641 24.5039C36.5156 24.0176 37.0781 23.7305 37.6816 23.7305H40.4297C40.8105 23.7305 41.0332 24.1641 40.8105 24.4746V24.4746Z"
         />
       </svg>
-    </div>
+    </button>
   </section>
 </template>
 
@@ -21,6 +21,7 @@ import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(TextPlugin, ScrollTrigger);
+
 export default {
   name: "homeSection",
   components: {},
@@ -85,6 +86,7 @@ export default {
         x: "20%",
         scale: 1.4,
       });
+
       gsap.to(title, {
         scrollTrigger: {
           trigger: people,

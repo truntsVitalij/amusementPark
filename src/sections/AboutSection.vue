@@ -1,6 +1,7 @@
 <template>
   <section class="about-section section" ref="container">
     <div class="container">
+      <h2 class="section__title" ref="title">About us</h2>
       <div class="columns">
         <div class="column">
           <div class="column video-column">
@@ -44,23 +45,38 @@ gsap.registerPlugin(ScrollTrigger);
 export default {
   name: "aboutSection",
   mounted() {
-    const { textContent, container } = this.$refs;
+    const { textContent, container, title } = this.$refs;
     gsap.to(textContent, {
       duration: 1.5,
-      delay: 1,
+      delay: 0.5,
       opacity: 1,
       scrollTrigger: {
         trigger: container,
-        start: "30% bottom",
+        start: "70% bottom",
         toggleActions: "restart play restart play",
       },
     });
+    gsap.fromTo(
+      title,
+      {
+        translateX: "-100%",
+        opacity: 0,
+      },
+      {
+        duration: 0.6,
+        delay: 0.3,
+        ease: "ease-out",
+        translateX: 0,
+        opacity: 1,
+        scrollTrigger: {
+          trigger: container,
+          start: "10% bottom",
+          toggleActions: "restart play restart play",
+        },
+      }
+    );
   },
-  methods: {
-    playVideo() {
-      console.log("play");
-    },
-  },
+  methods: {},
 };
 </script>
 
@@ -88,14 +104,13 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        svg {
+        use {
           width: 400px;
           height: 300px;
           fill: white;
-          .wheel_group {
-            animation: rotateWheel 10s infinite linear;
-            transform-origin: center;
-            transform-box: fill-box;
+          transform-origin: center;
+          transform-box: fill-box;
+          path.wheel_group {
           }
         }
         span {
@@ -113,14 +128,6 @@ export default {
         }
       }
     }
-  }
-}
-@keyframes rotateWheel {
-  from {
-    transform: rotateZ(0);
-  }
-  to {
-    transform: rotateZ(360deg);
   }
 }
 </style>

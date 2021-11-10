@@ -19,8 +19,26 @@ p, div, button {
 }
 .section {
   background-color: black;
-  padding-bottom: 200px;
+  padding-top: 150px;
+  .section__title {
+    font-size: 2em;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: white;
+    color: black;
+    padding: 0.5em 1em;
+    width: max-content;
+    border-radius: 1em;
+    margin-bottom: 1em;
+  }
 
 }
-body {
+@keyframes rotateWheel {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }

@@ -17,7 +17,7 @@
 
 <script>
 import AboutSection from "./sections/AboutSection.vue";
-import AmusementCatalogSection from "./sections/AmusementCatalogSection.vue";
+import AmusementCatalogSection from "./sections/AmusementBenefitsSection.vue";
 import ContactsSection from "./sections/ContactsSection.vue";
 import FeedBackSection from "./sections/FeedBackSection.vue";
 import HomeSection from "./sections/HomeSection.vue";
